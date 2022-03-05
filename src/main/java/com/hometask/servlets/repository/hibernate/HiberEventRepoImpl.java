@@ -66,16 +66,52 @@ public class HiberEventRepoImpl implements EventRepository {
 
     @Override
     public List<Event> getAll() {
-        return null;
+        List events = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
+            events = session.createQuery("FROM Event").list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return events;
     }
 
     @Override
     public Event save(Event event) {
-        return null;
+        Transaction transaction = null;
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
+            transaction = session.beginTransaction();
+            session.save(event);
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            return null;
+        }
+        return event;
     }
 
     @Override
     public Event update(Event event) {
-        return null;
+        Transaction transaction = null;
+        if (getById(event.getId()) == null) {
+            return null;
+        }
+
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
+            transaction = session.beginTransaction();
+            session.update(event);
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            return null;
+        }
+        return event;
     }
 }

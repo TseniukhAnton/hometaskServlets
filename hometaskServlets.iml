@@ -88,7 +88,10 @@
         <webroots>
           <root url="file://$MODULE_DIR$/out/artifacts/hometaskServlets_Web_exploded/WEB-INF/web" relative="/" />
         </webroots>
-        <sourceRoots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>
