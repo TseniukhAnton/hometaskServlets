@@ -14,7 +14,7 @@ public class EventService {
         this.eventRepository = eventRepository;
     }
 
-    List<Event> getUserEvents(User user) {
+    public List<Event> getUserEvents(User user) {
         return eventRepository.getUserEvents(user);
     }
 
