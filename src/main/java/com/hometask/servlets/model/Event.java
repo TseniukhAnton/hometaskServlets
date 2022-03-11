@@ -16,7 +16,7 @@ public class Event {
     private String eventName;
 
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", updatable = false, insertable = false)
     User user;
 
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
