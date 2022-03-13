@@ -1,10 +1,14 @@
 package com.hometask.servlets.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "events")
 public class Event {
@@ -16,10 +20,11 @@ public class Event {
     private String eventName;
 
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", updatable = false, insertable = false)
-    User user;
+    @JoinColumn(name = "file_id")
+    File file;
 
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    File file;
+    User user;
+
 }
