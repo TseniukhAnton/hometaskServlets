@@ -1,7 +1,7 @@
 create table events
 (
     id bigint auto_increment primary key unique ,
-    event_name varchar(15) null,
+    event_name varchar(15) not null ,
     file_id bigint not null,
     user_id bigint not null,
     FOREIGN KEY (file_id) references files (id),

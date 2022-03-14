@@ -14,13 +14,13 @@ public class HiberUserRepoImpl implements UserRepository {
     public User getById(Long id) {
         User user = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession();) {
-            Query query = session.createQuery("FROM User u LEFT JOIN FETCH u.files uf WHERE u.id = :id");
-            query.setParameter("id", id);
-            List users = query.getResultList();
-            if (users.isEmpty()) {
-                return null;
-            }
-            user = (User) users.get(0);
+//            Query query = session.createQuery("FROM User u LEFT JOIN FETCH u.files uf WHERE u.id = :id");
+//            query.setParameter("id", id);
+//            List users = query.getResultList();
+//            if (users.isEmpty()) {
+//                return null;
+//            }
+            user = session.get(User.class, id);
         } catch (Exception e) {
             e.printStackTrace();
         }

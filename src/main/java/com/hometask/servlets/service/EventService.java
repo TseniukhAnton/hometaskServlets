@@ -35,7 +35,8 @@ public class EventService {
         event.setEventName(eventName);
         event.setFile(file);
         event.setUser(user);
-        return eventRepository.save(event);
+        eventRepository.save(event);
+        return event;
     }
 
     public Event update(Event event){
