@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.url">jdbc:mysql://eu-cdbr-west-02.cleardb.net:3307/heroku_089a46a6cdea703</property>
+        <property name="hibernate.connection.url">jdbc:mysql://eu-cdbr-west-02.cleardb.net:3306/heroku_089a46a6cdea703</property>
         <property name="hibernate.connection.username">bb05489866a6f8</property>
         <property name="hibernate.connection.password">6c6ea92f</property>
 
