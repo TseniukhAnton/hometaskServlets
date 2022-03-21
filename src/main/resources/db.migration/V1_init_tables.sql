@@ -1,4 +1,3 @@
-use heroku_089a46a6cdea703;
 create table events
 (
     id bigint auto_increment primary key unique ,
