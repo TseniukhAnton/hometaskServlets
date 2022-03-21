@@ -11,10 +11,11 @@
     <packaging>war</packaging>
 
     <properties>
-        <flyway.user>root</flyway.user>
-        <flyway.password>root</flyway.password>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <flyway.user>bb05489866a6f8</flyway.user>
+        <flyway.password>6c6ea92f</flyway.password>
         <flyway.schemas>hometaskservlets</flyway.schemas>
-        <flyway.url>jdbc:mysql://localhost:3307/hometaskservlets</flyway.url>
+        <flyway.url>jdbc:mysql://eu-cdbr-west-02.cleardb.net:3307/heroku_089a46a6cdea703</flyway.url>
         <lombok.version>1.18.22</lombok.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
