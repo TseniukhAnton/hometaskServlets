@@ -31,7 +31,7 @@ public class HiberUserRepoImpl implements UserRepository {
     public User getByUsername(String username) {
         User user = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession();) {
-            Query query = session.createQuery("FROM User u LEFT JOIN FETCH u.files uf WHERE u.username = :username");
+            Query query = session.createQuery("FROM User WHERE username = :username");
             query.setParameter("username", username);
             List users = query.getResultList();
             if (users.isEmpty()) {

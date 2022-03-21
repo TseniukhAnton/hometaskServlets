@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/events")
+@WebServlet(name = "EventHistoryServlet", value = "/events")
 public class EventHistoryServlet extends HttpServlet {
     private UserService userService;
     private EventService eventService;

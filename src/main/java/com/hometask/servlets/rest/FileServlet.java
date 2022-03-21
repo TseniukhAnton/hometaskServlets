@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
-@WebServlet("/files")
+@WebServlet(name = "FileServlet", value = "/files")
 public class FileServlet extends HttpServlet {
     private FileService fileService;
     private UserService userService;
