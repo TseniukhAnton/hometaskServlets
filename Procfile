@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes;target/dependency/* hometaskServlets*
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* hometaskServlets*
