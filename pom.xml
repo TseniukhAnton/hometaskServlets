@@ -17,8 +17,8 @@
         <flyway.schemas>hometaskservlets</flyway.schemas>
         <flyway.url>jdbc:mysql://eu-cdbr-west-02.cleardb.net:3307/heroku_089a46a6cdea703</flyway.url>
         <lombok.version>1.18.22</lombok.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <javax.servlet.api.version>4.0.1</javax.servlet.api.version>
     </properties>
 
