@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.hometask.servlets.rest.UserServlet
+web: java $JAVA_OPTS -cp target/*:target/dependency/* hometaskServlets-1.0-SNAPSHOT
