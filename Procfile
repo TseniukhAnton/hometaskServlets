@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.hometask.servlets
+web: java $JAVA_OPTS -cp target/hometaskServlets-1.0-SNAPSHOT.war
