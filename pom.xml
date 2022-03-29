@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <flyway.user>bb05489866a6f8</flyway.user>
         <flyway.password>6c6ea92f</flyway.password>
-        <flyway.schemas>hometaskservlets</flyway.schemas>
+        <flyway.schemas>heroku_089a46a6cdea703</flyway.schemas>
         <flyway.url>jdbc:mysql://eu-cdbr-west-02.cleardb.net:3307/heroku_089a46a6cdea703</flyway.url>
         <lombok.version>1.18.22</lombok.version>
         <maven.compiler.source>11</maven.compiler.source>
@@ -64,18 +64,18 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals><goal>copy-dependencies</goal></goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-dependency-plugin</artifactId>-->
+<!--                <version>3.0.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>copy-dependencies</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals><goal>copy-dependencies</goal></goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -95,11 +95,11 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>8.4.4</version>
             </plugin>
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.heroku.sdk</groupId>-->
+<!--                <artifactId>heroku-maven-plugin</artifactId>-->
+<!--                <version>3.0.3</version>-->
+<!--            </plugin>-->
          </plugins>
     </build>
 
